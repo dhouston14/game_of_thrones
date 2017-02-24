@@ -1,0 +1,9 @@
+<h1>Houses of Westeros</h1>
+
+<h2><% @houses.each do |house| %></h2>
+  <div class="houses">
+    <h3><%=  link_to "House " + house.title, house %></p>
+    <img src="<%= house.img_url %>">
+  </div>
+
+<% end %>

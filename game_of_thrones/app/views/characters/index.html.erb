@@ -1,0 +1,9 @@
+<h1>Characters</h1>
+
+<h2><% @characters.each do |character| %></h2>
+  <div class="characters">
+    <h3><%= link_to character.name, character %></h3>
+    <img src="<%= character.img_url %>">
+  </div>
+
+<% end %>

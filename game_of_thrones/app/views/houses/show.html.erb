@@ -1,0 +1,13 @@
+<h1>House</h1>
+
+<h3><%= House.find(@house.id).title%></h3>
+<div class="house">
+  <%= image_tag @house.img_url %>
+</div>
+
+<h1>Members of House <%= House.find(@house.id).title %></h1>
+<h3><% @house.characters.each do |member| %></h3>
+  <div class="members">
+    <%= link_to member.name, member %>
+  </div>
+  <% end %>
